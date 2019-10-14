@@ -1,0 +1,7 @@
+name: 'uptdb'
+type: module
+description: 'modulo para hacer update de base de datos'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - panels

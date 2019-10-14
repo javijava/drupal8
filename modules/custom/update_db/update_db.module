@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains update_db.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function update_db_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the update_db module.
+    case 'help.page.update_db':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('modulo para hacer update de base de datos') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function update_db_theme() {
+  return [
+    'update_db' => [
+      'render element' => 'children',
+    ],
+  ];
+}

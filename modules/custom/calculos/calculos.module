@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains calculos.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function calculos_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the calculos module.
+    case 'help.page.calculos':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function calculos_theme() {
+  return [
+    'calculos' => [
+      'render element' => 'children',
+    ],
+  ];
+}
