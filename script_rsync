@@ -1,0 +1,3 @@
+#!/bin/bash
+#script para sincronizar carpeta desde un servidor hacia una maquina cliente
+sshpass -p 'root' rsync --progress -avz -e ssh /var/www/drupal8/ root@157.245.240.213:/var/www/htmldrupal8/sync /var/www/drupal8/sync

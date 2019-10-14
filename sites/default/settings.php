@@ -1,5 +1,11 @@
 <?php
 
+global $content_directories;
+$content_directories['sync'] = $app_root.'/../content/sync';
+
+$settings['default_content_deploy_content_directory'] = '../content';
+// Absolute path.
+$settings['default_content_deploy_content_directory'] = '/var/dcd/content';
 // @codingStandardsIgnoreFile
 
 /**
@@ -788,3 +794,5 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $config_directories['sync'] = 'sites/default/files/config_7ROpCOohj6zLPY7DIXyIQMjmqB08EW93nbITR_bKWX-LmaRJ0xigBL03GjBg4_TMTOr7yvFFzg/sync';
+
+$settings['rebuild_access'] = TRUE;
